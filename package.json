@@ -13,7 +13,7 @@
     "precommit": "npm run lint && npm test",
     "prepush": "npm run lint && npm test",
     "test": "echo \"Tests not found\"",
-    "build:static": "rm -rf static; cp public/index.html index.html"
+    "build:static": "rm -rf static; mkdir static && cp ./public/index.html ./static/index.html"
   },
   "keywords": [],
   "author": "Max Marinich",
