@@ -12,7 +12,8 @@
     "format": "prettier --write ./src/**/**.js",
     "precommit": "npm run lint && npm test",
     "prepush": "npm run lint && npm test",
-    "test": "echo \"Tests not found\""
+    "test": "echo \"Tests not found\"",
+    "build:static": "rm -rf static; cp public/index.html index.html"
   },
   "keywords": [],
   "author": "Max Marinich",
