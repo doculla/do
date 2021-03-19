@@ -1,0 +1,33 @@
+{
+  "name": "do",
+  "version": "0.0.1",
+  "description": "",
+  "main": "",
+  "types": "",
+  "scripts": {
+    "remove:nm": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
+    "remove:lock": "find . -type f \\( -name 'yarn.lock' -or -name 'package-lock.json' \\) -delete",
+    "remove:cache": "yarn cache clean --force; npm cache clean --force",
+    "lint": "eslint ./src/**/**.js",
+    "format": "prettier --write ./src/**/**.js",
+    "precommit": "npm run lint && npm test",
+    "prepush": "npm run lint && npm test",
+    "test": "echo \"Tests not found\""
+  },
+  "keywords": [],
+  "author": "Max Marinich",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-react": "^7.20.0",
+    "husky": "^4.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit",
+      "pre-push": "npm run precommit"
+    }
+  }
+}
