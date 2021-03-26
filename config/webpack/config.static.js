@@ -37,10 +37,6 @@ const configStatic = {
 			template: './public/index.html',
 			filename: './index.html',
 		}),
-		new HtmlWebPackPlugin({
-			template: './public/index.redirect.html',
-			filename: './static/index.html',
-		}),
 	],
 };
 
