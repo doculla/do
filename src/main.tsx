@@ -8,7 +8,7 @@ import './main.scss';
 export default function App() {
 	return (
 		<div className="app">
-			<Router>
+			<Router basename="/do">
 				<div>
 					<ul>
 						<li>
