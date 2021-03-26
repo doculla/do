@@ -6,8 +6,12 @@ const configBase = require('./config.base');
 const configDev = {
 	mode: 'development',
 	devtool: 'source-map',
+	output: {
+		publicPath: '/'
+	},
 	devServer: {
 		overlay: true,
+		historyApiFallback: true,
 	},
 	module: {
 		rules: [
